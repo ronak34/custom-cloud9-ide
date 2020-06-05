@@ -1,0 +1,17 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div style="width: 100%;">
+      <button onclick="embedGithubProject()">EMBED StackBlitz</button>
+      <button (click)="embedCloud9()">EMBED Cloud9</button>
+      <div *ngIf="cloud9IDE">
+        <embed
+          src="http://127.0.0.1:8181/ide.html"
+          width="100%"
+          height="800"
+          onerror="alert('URL invalid !!');"
+        />
+      </div>
+      <div id="myDiv"></div>
+    </div>
+  </div>
+</div>
